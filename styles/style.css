@@ -1,0 +1,164 @@
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, main, footer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #EEE;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Navegação */
+
+header {
+    height: 120px;
+    background: #777;
+}
+
+.navSide ul li, .navMenu ul li {
+    list-style: none;
+}
+
+.navSide ul li a, .navMenu ul li a {
+    text-decoration: none;
+}
+
+.navMenu {
+    display: flex;
+    width: 1280px;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.navMenu ul {
+    display: flex;
+    height: 90px;
+    width: 400px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    height: 90px;
+    width: 90px;
+    background: #bbb;
+    border-radius: 100%;
+}
+
+/* Main - Slide */
+main {
+    flex-direction: column;
+}
+
+.slide {
+    width: 1280px;
+    height: 300px;
+    background: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Main - Destaques*/
+.dContent {
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.destaquesProd {
+    width: 280px;
+    height: 300px;
+    background: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Main Promoções e combos*/
+
+.pContent {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentLeft, .contentRight {
+    display: flex;
+    width: 600px;
+    flex-wrap: wrap;
+}
+
+.contentRight {
+    justify-content: flex-start;
+    align-content: flex-start;
+    height: 100%;
+}
+
+.rightTitle, .leftTitle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 600px;
+    height: 100px;
+    padding: 20px 0;
+    margin: 20px 0;
+    border-bottom: 1px dotted #000;
+}
+
+.promoProd {
+    display: flex;
+    height: 300px;
+    width: 250px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.contentLeft {
+    height: 100%;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.combosProd {
+    margin: 20px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+
+footer {
+    height: 300px;
+    background: #333;
+}
+
+/* Footer - navSide */
+.navSide ul {
+    border-right:1px solid #000;;
+}
+.navSide ul li {
+    margin: 20px;
+}
+
+.navSide ul li a {
+    color: #fff;
+}
