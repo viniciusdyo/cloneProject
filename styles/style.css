@@ -13,7 +13,10 @@ header, main, footer {
     justify-content: center;
     align-items: center;
     align-content: center;
-    background: #EEE;
+}
+
+main {
+    background: repeat url("../img/bg.jpg") ;
 }
 
 .container {
@@ -26,7 +29,7 @@ header, main, footer {
 
 header {
     height: 120px;
-    background: #777;
+    background: #111;
 }
 
 .navSide ul li, .navMenu ul li {
@@ -46,17 +49,53 @@ header {
 
 .navMenu ul {
     display: flex;
-    height: 90px;
+    height: 120px;
     width: 400px;
     align-items: center;
     justify-content: space-around;
 }
 
+.navMenu ul li a {
+    color: #FFF;
+    font-size: 1rem;
+}
+
+.navMenu ul li {
+    border-radius: 10%;
+    transition: all .25s linear .25s;
+    padding: 15px;
+}
+
+.navMenu ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #999;
+}
+
+
 .logo {
     height: 90px;
     width: 90px;
-    background: #bbb;
     border-radius: 100%;
+}
+
+.logo img {
+    height: 120px;
+    width: 120px;
+}
+.searchInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.searchInput input {
+    width: 500px;
+    height: 40px;
+}
+
+.searchInput button {
+    height: 40px;
+    width: 40px;
 }
 
 /* Main - Slide */
@@ -66,9 +105,11 @@ main {
 
 .slide {
     width: 1280px;
-    height: 300px;
-    background: #FFF;
+    height: 600px;
+    background-image: url("../img/slide.jpg");
+    background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 
 }
 
@@ -81,11 +122,38 @@ main {
 }
 
 .destaquesProd {
+    display: flex;
+    flex-direction: column;
     width: 280px;
-    height: 300px;
-    background: #FFF;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 380px;
+    text-align: center;
+    transition: all .25s linear .1s;
+}
 
+.destaquesProd:hover {
+    transform: scale(1.05);
+}
+
+.destaquesProd img {
+    height: 280px;
+    width: 280px;
+    object-fit: cover;
+}
+
+.destaquesProd h2 {
+    background-color: #111;
+    width: 100%;
+    max-height: 100%;
+    color: yellow;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.destaquesProd p {
+    max-height: 100%;
+    width: 100%;
+    color: #fff;
+    padding: 5px;
 }
 
 /* Main Promoções e combos*/
@@ -148,13 +216,15 @@ main {
 
 footer {
     height: 300px;
-    background: #333;
+    background: #111;
 }
 
 /* Footer - navSide */
 .navSide ul {
-    border-right:1px solid #000;;
+    border-right: 1px solid #000;
+    ;
 }
+
 .navSide ul li {
     margin: 20px;
 }
