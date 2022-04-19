@@ -22,7 +22,7 @@ main {
 .container {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 /* Navegação */
@@ -105,7 +105,7 @@ main {
 
 .slide {
     width: 1280px;
-    height: 600px;
+    height: 400px;
     background-image: url("../img/slide.jpg");
     background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -115,12 +115,22 @@ main {
 
 /* Main - Destaques*/
 .dContent {
-    width: 1280px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.alignContent {
+    display: flex;
+    width: 1280px;
 }
 
+.dContent .alignContent {
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 500px;
+}
 .destaquesProd {
     display: flex;
     flex-direction: column;
