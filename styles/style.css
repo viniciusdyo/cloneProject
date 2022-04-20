@@ -31,7 +31,9 @@ header {
     height: 120px;
     background: #111;
 }
-
+.navDropdown {
+    display: none;
+}
 .navSide ul li, .navMenu ul li {
     list-style: none;
 }
@@ -50,7 +52,7 @@ header {
 .navMenu ul {
     display: flex;
     height: 120px;
-    width: 400px;
+    max-width: 400px;
     align-items: center;
     justify-content: space-around;
 }
@@ -73,6 +75,7 @@ header {
 
 
 .logo {
+    position: relative;
     height: 90px;
     width: 90px;
     border-radius: 100%;
@@ -91,6 +94,7 @@ header {
 .searchInput input {
     width: 500px;
     height: 40px;
+    margin-left: 30px;
 }
 
 .searchInput button {
@@ -316,4 +320,115 @@ footer {
 
 .navSide ul li a {
     color: #fff;
+}
+
+
+/* Media query */
+
+@media (max-width: 1280px)
+{
+    .navMenu ul {
+        width: 400px;
+    }
+    .searchInput {
+        width: 300px;
+    }
+    .pContent, .alignContent, .slideActions, .slideItem img, .slider, .navMenu {
+        width: 960px;
+    }
+
+    .dContent .alignContent {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .contentLeft, .contentRight {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1080px ) 
+{
+    .pContent, .alignContent, .slideActions, .slideItem img, .slider, .navMenu {
+        width: 900px;
+    }
+}
+
+@media (max-width: 900px) 
+{
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+    .pContent, .alignContent, .slideActions, .slideItem img, .slider, .navMenu {
+        width: 720px;
+    }
+    .pContent {
+        flex-wrap: wrap;
+    }
+    .contentLeft, .contentRight {
+        width: 300px;
+    }
+
+    .navMenu ul {
+        display: none;
+    }
+
+    .navDropdown {
+        display: flex;
+        margin:60px ;
+        width: 40px;
+        height: 40px;
+        
+    }
+    .navDropdown svg  {
+        fill: #FFF;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .iconDropOpen {
+        display: none;
+    }
+
+    .dropDownContent {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        min-height: 400px;
+        min-width: 300px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+        list-style: none;
+        top: 80px;
+        right: 50px;
+        font-size: 1.5rem;
+        align-items: center;
+    }
+    .dropDownContent li a {
+        text-decoration: none;
+        color: #FFF;
+    }
+    .dropDownContent li {
+        padding: 30px;
+        cursor: pointer;
+        
+    }
+    .dropDownContent li:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        transition: all .25s linear;
+    }
+    
+
+    .navDropdown:hover .iconDropClose {
+        display: none;
+    }
+   
+    .navDropdown:hover .iconDropOpen, .navDropdown:active .iconDropOpen {
+        display: flex;
+        fill: red;
+    }
+    .navDropdown:hover .dropDownContent, .navDropdown:active .dropDownContent {
+        display: flex;
+    }
 }
