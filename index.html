@@ -26,9 +26,18 @@
     </header>
     <main>
         <section class="container slider">
-            <div class="slide">
-                <img src="" alt="">
+            
+            <div class="slides">
+                <div class="slideItem slideActive" data-js="slideItem"><img src="./img/slide-1.jpg" alt=""></div>
+                <div class="slideItem" data-js="slideItem"><img src="./img/slide-2.jpg" alt=""><span class="slideLabel"><h1>Título teste slide slide slide</h1><p>slide teste slide teste slide teste slide teste </p></span></div>
+                <div class="slideItem" data-js="slideItem"><img src="./img/slide-3.jpg" alt=""></div>
+                <div class="slideItem" data-js="slideItem"><img src="./img/slide-4.jpg" alt=""></div>
             </div>
+            <div class="slideActions">
+                <button class="prevButton" data-js="prevButton"><</button>
+                <button class="nextButton" data-js="nextButton">></button>
+            </div>
+            <script src="./js/script.js"></script>
         </section>
         <section class="container dContent">
             <div class="alignContent">
@@ -111,6 +120,7 @@
             </ul>
         </nav>
     </footer>
+    
 </body>
 
 </html>
