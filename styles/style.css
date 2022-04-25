@@ -6,6 +6,9 @@
     box-sizing: border-box;
 }
 
+body {
+    background: repeat url("../img/bg.jpg")
+}
 header, main, footer {
     display: flex;
     width: 100%;
@@ -15,9 +18,6 @@ header, main, footer {
     align-content: center;
 }
 
-main {
-    background: repeat url("../img/bg.jpg") ;
-}
 
 .container {
     display: flex;
@@ -29,7 +29,7 @@ main {
 
 header {
     height: 120px;
-    background: #111;
+    background-color:rgba(0, 0, 0, 0.7);
 }
 .navDropdown {
     display: none;
@@ -41,7 +41,23 @@ header {
 .navSide ul li a, .navMenu ul li a {
     text-decoration: none;
 }
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    background-color:rgba(0, 0, 0, 0.9);
+    animation: menuDrop .5s linear alternate;
+    border-radius: 0 0px 10px 10px;
+}
 
+@keyframes menuDrop {
+    0% {
+        top: -120px;
+    }
+    100%{
+        top:0;
+    }
+}
 .navMenu {
     display: flex;
     width: 1280px;
@@ -75,32 +91,55 @@ header {
 
 
 .logo {
+    display: flex;
     position: relative;
-    height: 90px;
-    width: 90px;
+    height: 120px;
+    width: 120px;
     border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .logo img {
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
 }
 .searchInput {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    
 }
 .searchInput input {
     width: 500px;
     height: 40px;
     margin-left: 30px;
+    border-radius: 1%;
+    border: none;
+    margin: 0 5px;
+}
+.searchInput input:focus {
+    outline: none;
 }
 
 .searchInput button {
     height: 40px;
     width: 40px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    transition: all .25s ease;
 }
+.searchInput button:hover {
+    background-color: darkred;
+}
+.searchInput button:active {
+    background-color: rgba(255, 180, 50, 0.7);
+    border: 2px groove darkred;
+}
+
 
 /* Main - Slide */
 main {
@@ -120,6 +159,8 @@ main {
     max-height: 400px;
     overflow: hidden;
     object-fit: cover;
+    box-shadow: rgba(255, 255, 255, 0.3) 1px 1px 10px;
+    background: rgba(0, 0, 0, 0.7);
     
 }
 .slideItem {
@@ -197,7 +238,7 @@ main {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #111;
 }
 .alignContent {
     display: flex;
@@ -356,9 +397,13 @@ footer {
 
 @media (max-width: 900px) 
 {
-    .logo img {
+    .logo {
         width: 90px;
         height: 90px;
+    }
+    .logo img {
+        width: 80px;
+        height: 80px;
     }
     .pContent, .alignContent, .slideActions, .slideItem img, .slider, .navMenu {
         width: 720px;
